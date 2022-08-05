@@ -1,0 +1,44 @@
+Class in charge --> Hibernate.java
+-findUserClient(String name, String password)
+    Busca un usuario a través del nombre y la contraseña
+-findUserbyName(String name)
+    Busca un usuario a través del nombre y lo devuelve.
+-findAdmin(String name, String password)
+    Busca un administrador a través del nombre y la contraseña.
+-showItem(int id)
+    Busca un item a través del id y lo devuelve.
+-showUserClientList()
+    Busca todos los usuarios normales que hay y los devuelve en una lista.
+-showItemsList()
+    Busca todos los items que hay y los devuelve en una lista.
+-showSupplierList(int id)
+    Busca todos los suppliers que hay según el id de un item y los devuelve en una lista.
+-showPriceReductionsList(int id)
+    Busca todos los price reductions que hay según el id de un item y los devuelve en una lista.
+-findPriceReductions(int id, double reduce)
+    Busca un price reductions según el id de un item y el precio reducido y lo devuelve.
+-showItemsActive()
+    Busca todos los items que tenga el estado active y los devuelve en una lista.
+-showItemsDiscontinued()
+    Busca todos los items que tenga el estado discontinued y los devuelve en una lista.
+-saveItem(Item item)
+    Guarda en la base de datos el item que se le pasa por parametro.
+-deleteItem(Item item)
+    Borra de la base de datos el item que se le pasa por parametro.
+-deletePriceReductions(int id)
+    Borra todos los price reductions asociados a un item pero esto solo pasará cuando se borré
+    el item.
+-editItem(Item Item)
+    Edita el item que se pasa por parametro actualizando en la base de datos.
+-saveUser(UserClient userClient)
+    Guarda en la base de datos el usuario que se le pasa por parametro.
+-deleteUser(UserClient userClient)
+    Borra de la base de datos el usuario que se le pasa por parametro.
+-saveSupplier(Supplier supplier)
+    Guarda en la base de datos el supplier que se le pasa por parametro.
+-savePriceReductions(PriceReductions priceReductions)
+    Guarda en la base de datos el price reductions que se le pasa por parametro.
+-deactivateItem(Item item)
+    Cambia el estado del item que se le pasa por parametro. Pasandolo de active a discontinued
+-showSuppliers()
+    Busca todos los suppliers que hay y los devuelve en una lista

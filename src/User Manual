@@ -1,0 +1,51 @@
+UserClient Manual
+Para comenzar se verá una pantalla de login en la que si el usuario no está
+registrado deberá pulsar el boton de New UserClient para introducir los datos que
+se le van requerir (nombre y contraseña). En caso de que esté registrado tendrá que
+rellenar los campos correctamente. Si no es así se le  volverá a pedir los datos hata
+que se introduzcan correctamente. Se reconocerá automáticamente si es un usuario normal
+o es un administrador.
+
+Dependiendo de si el usuario es administrador o no, podrá aparecer dos tipos de menu.
+El primer tipo , si el usuario es administrador, consiste en un menu con dos pestañas
+en el que en la primera pestaña podrá ver un listado con todos los usuarios y
+en la otra pestaña un listado con todos los items que hay.
+En la parte superior se dispone de tres opciones de menu: Crear un usuario, elimnar un usuario
+y eliminar un item.
+Para crear un usuario tendrás que darle a esta opcion de menu y pedirá introducir un nombre y luego una
+contraseña y a continuación se creará el usuario siempre y cuando no exista.
+A la hora de eliminar un usuario habrá que hacer click sobre el usuario que se desea borrar y después
+darle a la opción de menu y se eliminará.
+Si se quiere eliminar un item habrá que ir a la segunda pestaña para clickar sobre el item code y pulsar en
+la opcion y el item se borrará quitandose a su vez del listado.
+
+El segundo tipo, si el usuario no es administrador, consiste en un menu con dos pestañas que
+en una verá un listado de los items que hay y en la otra servirá para ver los detalles del item
+que el usuario quiera ver o crear.
+En la parte superior se dispone de cinco opciones de menu que son: crear un item, editar un item,
+guardar, desactivar un item y ordenar por estado
+Al darle a crear un item te llevará a la pestaña de detalles en la que apareceran todos los campos
+vacíos y el usuario tendrá que rellenar el codigo del item y su descripcion como campos obligatorios
+para poder guardar y registrar el item. Aquí no podrá añadir ni suppliers ni price reductions si
+lo desea poner será una vez haya creado el item.
+Para editar un item tendrá que haber hecho click sobre el idcode del item que quiera
+modificar. Una vez hecho eso, podrá darle a editar un item que le llevará a la pestaña de detalles
+con los campos rellenos con los datos correspondientes del item seleccionado y podrá cambiar aquellos
+campos que se le permita (todos menos el idcode). Aquí podrá añadir los suppliers y los price
+reductions que se considere, cuando se le de a los respectivos botones se le indicará como añadirlos
+Esto se realizará siempre y cuando el item tenga el estado activo sino no se podrá modificar.
+Si desea guardar al finalizar una creación tendrá que entrar en save item y después en save New item.
+Y si es al finalizar una modificación de un item se le dará a save item y luego a save edited item.
+Para desactivar un item se tendrá que realizar un proceso parecido como para editar. Se hará
+click en el item que se quiera cambiar su estado y luego se le dará click a la opcion de menu.
+
+En la primera pestaña de este menu , que es donde se encuentra el listado de los items en el cual
+se hace click para las funciones anteriores, en la opcion de ordenar por estado habrá tres elecciones
+posibles: All, Active y Discontinued.
+Esto servirá para filtrar según su estado. La opción all mostrará todos los item independientemente
+de su estado. La opción active mostrará en el listado solo aquellos que su estado sea active y con
+discontinued pasará lo mismo pero mostrando aquellos items que su estado sea discontinued.
+Cuando se seleccione la opcion de filtrado la tabla se actualizara en base a lo elegido
+
+En ambos menus se dispone de una opcion de menu que permite cerrar sesion y volver a la pantalla de
+login.

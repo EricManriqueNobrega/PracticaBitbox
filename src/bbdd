@@ -1,0 +1,56 @@
+BEGIN;
+
+CREATE SEQUENCE user_id_seq;
+CREATE TABLE userclient(
+    NAMEUSER VARCHAR PRIMARY KEY,
+    PASSWORDUSER VARCHAR (50)
+)
+
+CREATE SEQUENCE administrator_id_seq;
+CREATE TABLE administrator(
+    nameuser VARCHAR PRIMARY KEY,
+    passworduser VARCHAR (50)
+);
+
+CREATE SEQUENCE pricereductions_id_seq;
+CREATE TABLE pricereductions(
+    reducedprice DOUBLE PRIMARY KEY,
+    startdate DATE,
+    enddate DATE,
+    id_item INT REFERENCES item(iditem)
+);
+
+CREATE SEQUENCE supplier_id_seq;
+CREATE TABLE supplier(
+    namesupplier VARCHAR PRIMARY KEY,
+    countrysupplier VARCHAR (50)
+    id_item INT REFERENCES item(iditem)
+);
+
+CREATE SEQUENCE item_id_seq;
+CREATE TABLE item (
+    iditem int PRIMARY KEY,
+    descriptionitem VARCHAR (50) NOT NULL,
+    price DOUBLE,
+	stateitem INTEGER,
+	name_user VARCHAR REFERENCES userclient(nameuser),
+	creationdate DATE,
+    REDUCED_PRICE DOUBLE REFERENCES pricereductions(reducedprice)
+);
+
+INSERT INTO USERCLIENT VALUES('Jose','1234');
+INSERT INTO USERCLIENT VALUES('Antonio','1234');
+INSERT INTO USERCLIENT VALUES('Miguel','1234');
+INSERT INTO USERCLIENT VALUES('Luis','1234');
+INSERT INTO ADMINISTRATOR VALUES('Paco','1234');
+INSERT INTO ADMINISTRATOR VALUES('Federico','1234');
+INSERT INTO PRICEREDUCTIONS VALUES(20.00,'2022-08-01','2022-08-06', SELECT IDITEM FROM ITEM WHERE IDITEM=1);
+INSERT INTO PRICEREDUCTIONS VALUES(10.00,'2022-08-01','2022-08-06', SELECT IDITEM FROM ITEM WHERE IDITEM=1);
+INSERT INTO SUPPLIER VALUES('Sl', 'Esp', IDITEM);
+INSERT INTO SUPPLIER VALUES('Sl', 'Esp', IDITEM);
+INSERT INTO ITEM VALUES(1,'EJEMPLO',20.00,1,'2022-08-01',NULL, SELECT NAMEUSER from USERCLIENT WHERE nameuser='Jose');
+
+COMMIT;
+END;
+
+https://www.h2database.com/html/main.html

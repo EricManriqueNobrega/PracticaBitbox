@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="Item">
+        <id name="idItem" column="IDITEM">
+        </id>
+        <property name="description" column="DESCRIPTIONITEM"/>
+        <property name="price" type="double" column="PRICE"></property>
+        <property name="stateId" type="int" column="STATEITEM"></property>
+        <property name="creatorName" column="NAME_USER"></property>
+        <property name="reducedPrice" type="double" column="PRICEREDUCED"></property>
+        <property name="creationDate" type="date" column="DATECREATE"></property>
+    </class>
+</hibernate-mapping>
