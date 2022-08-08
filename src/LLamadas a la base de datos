@@ -1,6 +1,6 @@
 Class in charge --> Hibernate.java
 -findUserClient(String name, String password)
-    Busca un usuario a través del nombre y la contraseña
+    Busca un usuario a través del nombre y la contraseña.
 -findUserbyName(String name)
     Busca un usuario a través del nombre y lo devuelve.
 -findAdmin(String name, String password)
@@ -41,4 +41,6 @@ Class in charge --> Hibernate.java
 -deactivateItem(Item item)
     Cambia el estado del item que se le pasa por parametro. Pasandolo de active a discontinued
 -showSuppliers()
-    Busca todos los suppliers que hay y los devuelve en una lista
+    Busca todos los suppliers que hay y los devuelve en una lista.
+-showPriceReductions()
+    Busca todos los price reductions que hay y los devuelve en una lista.
