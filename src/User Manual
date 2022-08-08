@@ -1,4 +1,5 @@
 User Manual
+Examples(Userclient name = User password = 1234, Administrator name = Admin password = 1234)
 To begin, you will see a login screen in which if the user is not
 registered must press the New UserClient button to enter the data that
 (name and password) will be required. If you are registered, you will have to

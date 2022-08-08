@@ -23,8 +23,8 @@ public class ItemDetails extends JPanel {
     JTextArea descriptionField=new JTextArea(5,25);
     JTextField priceField = new JTextField(10);
     JComboBox cbxState = new JComboBox();
-    JList<Supplier> jListSupplier = new JList<>();
-    JComboBox<PriceReductions> cbxPriceReductions = new JComboBox<>();
+    JList<String> jListSupplier = new JList<>();
+    JComboBox<Double> cbxPriceReductions = new JComboBox<Double>();
     DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
     JFormattedTextField dateCreation = new JFormattedTextField(dateFormat);
     JTextField userField = new JTextField(10);
@@ -125,7 +125,7 @@ public class ItemDetails extends JPanel {
         cbxPriceReductions.removeAllItems();
         if(getListPriceReductions(item.getIdItem()) != null) {
             for (int i = 0; i < getListPriceReductions(item.getIdItem()).size(); i++) {
-                cbxPriceReductions.addItem(getListPriceReductions(item.getIdItem()).get(i));
+                cbxPriceReductions.addItem(getListPriceReductions(item.getIdItem()).get(i).getReducedPrice());
             }
             cbxPriceReductions.setSelectedItem(hibernate.findPriceReductions(item.getIdItem(), item.getReducedPrice()));
         }
@@ -151,7 +151,7 @@ public class ItemDetails extends JPanel {
         descriptionField.setText("");
         priceField.setText("");
         cbxState.setSelectedIndex(0);
-        Supplier[] supplier = new Supplier[0];
+        String[] supplier = new String[0];
         jListSupplier.setListData(supplier);
         cbxPriceReductions.removeAllItems();
         dateCreation.setText("");
@@ -253,14 +253,14 @@ public class ItemDetails extends JPanel {
     }
 
     public void addPriceReductions(PriceReductions price){
-        cbxPriceReductions.addItem(price);
+        cbxPriceReductions.addItem(price.getReducedPrice());
     }
 
 
-    public Supplier[] changeListToArray(List<Supplier> listSuppliers){
-        Supplier[] list = new Supplier[listSuppliers.size()];
+    public String[] changeListToArray(List<Supplier> listSuppliers){
+        String[] list = new String[listSuppliers.size()];
         for(int i = 0; i<list.length;i++){
-            list[i] = listSuppliers.get(i);
+            list[i] = listSuppliers.get(i).getNameSupplier();
         }
         return list;
     }
